@@ -100,8 +100,13 @@ namespace Tyuiu.KhudoiberdievDB.Sprint7.Project.V5
             str = "";
         }
 
-        private void openFileDialogTaskChart_HDB_FileOk(object sender, CancelEventArgs e)
+        private void buttonGraphChart_HDB_Click(object sender, EventArgs e)
         {
+            chart_HDB.Series[0].Points.AddXY(352,27);
+            chart_HDB.Series[0].Points.AddXY(773,99);
+            chart_HDB.Series[0].Points.AddXY(902,53);
+            chart_HDB.Series[0].Points.AddXY(102,76);
+            chart_HDB.Series[0].Points.AddXY(211,56);
 
         }
     }

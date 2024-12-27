@@ -286,8 +286,23 @@ namespace Tyuiu.KhudoiberdievDB.Sprint7.Project.V5
         private void buttonGraph_HDB_Click(object sender, EventArgs e)
         {
             this.Hide();
+
             FormChart chart = new FormChart();
-            chart.Show();
+            chart.ShowDialog();
+
+
+        }
+
+        private void buttonHelp_HDB_Click(object sender, EventArgs e)
+        {
+            FormHelp help = new FormHelp();
+            help.ShowDialog();
+        }
+
+        private void buttonAbout_HDB_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
         }
     }
 }

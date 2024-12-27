@@ -117,7 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="textBoxHelp_HDB.Text" xml:space="preserve">
+    <value>                                       ОБЛАСТЬ ПРИМЕНЕНИЯ
+                                       Desktop приложение на основе Windows Forms по предметной области "Оптовая 
+                                       база" обеспечивает
+                                       информационную поддержку при работе с данными в рамках предметной области.
+
+КРАТКОЕ ОПИСАНИЕ ВОЗМОЖНОСТЕЙ
+- ввод данных
+- редактирование данных
+- сохранение данных
+- чтение данных из файлов
+- статистические возможности
+
+
+ПОДРОБНОЕ ОПИСАНИЕ ВОЗМОЖНОСТЕЙ
+Приложение имеет следующий функционал: поиск по всей таблице, добавление новых строк в таблицу, удаление строк из таблицы, сортировка по стоимости товара по убыванию и возрастанию, фильтрация по указанным столбцам, добавление таблицы из csv файла, сохранение таблицы в csv файл, вычисление количества товаров на складе, вычисления средней стоимости товаров, вывод на диаграмму данных о товаре и его стоимости.
+Для функционала использована библиотека классов и unit-тесты.
+
+</value>
+  </data>
+  <metadata name="toolTipHelp_HDB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>

@@ -28,12 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormAbout";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
+            textBoxAbout_HDB = new TextBox();
+            SuspendLayout();
+            // 
+            // textBoxAbout_HDB
+            // 
+            textBoxAbout_HDB.Font = new Font("Segoe UI", 12F);
+            textBoxAbout_HDB.Location = new Point(12, 12);
+            textBoxAbout_HDB.Multiline = true;
+            textBoxAbout_HDB.Name = "textBoxAbout_HDB";
+            textBoxAbout_HDB.Size = new Size(629, 297);
+            textBoxAbout_HDB.TabIndex = 0;
+            textBoxAbout_HDB.TabStop = false;
+            textBoxAbout_HDB.Text = resources.GetString("textBoxAbout_HDB.Text");
+            // 
+            // FormAbout
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(653, 321);
+            Controls.Add(textBoxAbout_HDB);
+            MaximizeBox = false;
+            MaximumSize = new Size(671, 368);
+            MinimizeBox = false;
+            MinimumSize = new Size(671, 368);
+            Name = "FormAbout";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormAbout";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBoxAbout_HDB;
     }
 }

@@ -28,21 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            saveFileDialog1 = new SaveFileDialog();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHelp));
+            textBoxHelp_HDB = new TextBox();
+            buttonBackT0MM_HDB = new Button();
+            toolTipHelp_HDB = new ToolTip(components);
             SuspendLayout();
+            // 
+            // textBoxHelp_HDB
+            // 
+            textBoxHelp_HDB.Location = new Point(12, 12);
+            textBoxHelp_HDB.Multiline = true;
+            textBoxHelp_HDB.Name = "textBoxHelp_HDB";
+            textBoxHelp_HDB.Size = new Size(776, 426);
+            textBoxHelp_HDB.TabIndex = 0;
+            textBoxHelp_HDB.TabStop = false;
+            textBoxHelp_HDB.Text = resources.GetString("textBoxHelp_HDB.Text");
+            textBoxHelp_HDB.TextChanged += textBoxHelp_HDB_TextChanged;
+            // 
+            // buttonBackT0MM_HDB
+            // 
+            buttonBackT0MM_HDB.Image = Properties.Resources.back_icon;
+            buttonBackT0MM_HDB.Location = new Point(12, 12);
+            buttonBackT0MM_HDB.Name = "buttonBackT0MM_HDB";
+            buttonBackT0MM_HDB.Size = new Size(155, 90);
+            buttonBackT0MM_HDB.TabIndex = 1;
+            toolTipHelp_HDB.SetToolTip(buttonBackT0MM_HDB, "Вернуться в главное меню");
+            buttonBackT0MM_HDB.UseVisualStyleBackColor = true;
+            buttonBackT0MM_HDB.Click += buttonBackT0MM_HDB_Click;
             // 
             // FormHelp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 451);
+            Controls.Add(buttonBackT0MM_HDB);
+            Controls.Add(textBoxHelp_HDB);
+            MaximizeBox = false;
+            MaximumSize = new Size(818, 498);
+            MinimizeBox = false;
+            MinimumSize = new Size(818, 498);
             Name = "FormHelp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormHelp";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private SaveFileDialog saveFileDialog1;
+        private TextBox textBoxHelp_HDB;
+        private Button buttonBackT0MM_HDB;
+        private ToolTip toolTipHelp_HDB;
     }
 }

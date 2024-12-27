@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panelChart_HDB = new Panel();
             buttonBackToMM_HDB = new Button();
             chart_HDB = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -47,6 +48,7 @@
             ColumnInfo_HDB = new DataGridViewTextBoxColumn();
             openFileDialogTaskChart_HDB = new OpenFileDialog();
             saveFileDialogTaskChart_HDB = new SaveFileDialog();
+            toolTipCHart_HDB = new ToolTip(components);
             panelChart_HDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart_HDB).BeginInit();
             panelGridChart_HDB.SuspendLayout();
@@ -69,56 +71,65 @@
             // 
             // buttonBackToMM_HDB
             // 
+            buttonBackToMM_HDB.Cursor = Cursors.Hand;
             buttonBackToMM_HDB.Image = Properties.Resources.back_icon;
             buttonBackToMM_HDB.Location = new Point(15, 12);
             buttonBackToMM_HDB.Name = "buttonBackToMM_HDB";
             buttonBackToMM_HDB.Size = new Size(186, 80);
             buttonBackToMM_HDB.TabIndex = 9;
+            toolTipCHart_HDB.SetToolTip(buttonBackToMM_HDB, "Вернуться в главное меню");
             buttonBackToMM_HDB.UseVisualStyleBackColor = true;
             buttonBackToMM_HDB.Click += buttonBackToMM_HDB_Click;
             // 
             // chart_HDB
             // 
-            chartArea2.Name = "ChartArea1";
-            chart_HDB.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            chart_HDB.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chart_HDB.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            chart_HDB.Legends.Add(legend1);
             chart_HDB.Location = new Point(15, 118);
             chart_HDB.Name = "chart_HDB";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chart_HDB.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart_HDB.Series.Add(series1);
             chart_HDB.Size = new Size(657, 375);
             chart_HDB.TabIndex = 8;
             // 
             // buttonGraphChart_HDB
             // 
+            buttonGraphChart_HDB.Cursor = Cursors.Hand;
             buttonGraphChart_HDB.Image = Properties.Resources.статистика;
             buttonGraphChart_HDB.Location = new Point(379, 3);
             buttonGraphChart_HDB.Name = "buttonGraphChart_HDB";
             buttonGraphChart_HDB.Size = new Size(293, 109);
             buttonGraphChart_HDB.TabIndex = 7;
+            toolTipCHart_HDB.SetToolTip(buttonGraphChart_HDB, "Подтвердить данные");
             buttonGraphChart_HDB.UseVisualStyleBackColor = true;
+            buttonGraphChart_HDB.Click += buttonGraphChart_HDB_Click;
             // 
             // buttonSaveFileChart_HDB
             // 
+            buttonSaveFileChart_HDB.Cursor = Cursors.Hand;
             buttonSaveFileChart_HDB.Image = Properties.Resources.page_save;
             buttonSaveFileChart_HDB.Location = new Point(293, 12);
             buttonSaveFileChart_HDB.Name = "buttonSaveFileChart_HDB";
             buttonSaveFileChart_HDB.Size = new Size(80, 80);
             buttonSaveFileChart_HDB.TabIndex = 2;
+            toolTipCHart_HDB.SetToolTip(buttonSaveFileChart_HDB, "Сохранить файл");
             buttonSaveFileChart_HDB.UseVisualStyleBackColor = true;
             buttonSaveFileChart_HDB.Click += buttonSaveFileChart_HDB_Click;
             // 
             // buttonAddFileChart_HDB
             // 
+            buttonAddFileChart_HDB.Cursor = Cursors.Hand;
             buttonAddFileChart_HDB.Image = Properties.Resources.page_add;
             buttonAddFileChart_HDB.Location = new Point(207, 12);
             buttonAddFileChart_HDB.Name = "buttonAddFileChart_HDB";
             buttonAddFileChart_HDB.Size = new Size(80, 80);
             buttonAddFileChart_HDB.TabIndex = 2;
+            toolTipCHart_HDB.SetToolTip(buttonAddFileChart_HDB, "ЗАгрузить файл");
             buttonAddFileChart_HDB.UseVisualStyleBackColor = true;
             buttonAddFileChart_HDB.Click += buttonAddFileChart_HDB_Click;
             // 
@@ -135,6 +146,7 @@
             // dataGridViewChart_HDB
             // 
             dataGridViewChart_HDB.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridViewChart_HDB.BorderStyle = BorderStyle.None;
             dataGridViewChart_HDB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewChart_HDB.Columns.AddRange(new DataGridViewColumn[] { ColumnCount__HDB, ColumnCodePro_HDB, ColumnNameOfPro_HDB, ColumnCount_HDB, ColumnPrice_HDB, ColumnInfo_HDB });
             dataGridViewChart_HDB.Location = new Point(3, 12);
@@ -197,6 +209,10 @@
             ClientSize = new Size(1368, 496);
             Controls.Add(panelChart_HDB);
             Controls.Add(panelGridChart_HDB);
+            MaximizeBox = false;
+            MaximumSize = new Size(1386, 543);
+            MinimizeBox = false;
+            MinimumSize = new Size(1386, 543);
             Name = "FormChart";
             Text = "FormChart";
             panelChart_HDB.ResumeLayout(false);
@@ -224,5 +240,6 @@
         private Button buttonBackToMM_HDB;
         private OpenFileDialog openFileDialogTaskChart_HDB;
         private SaveFileDialog saveFileDialogTaskChart_HDB;
+        private ToolTip toolTipCHart_HDB;
     }
 }

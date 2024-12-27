@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelMenu_HDB = new Panel();
             buttonGraph_HDB = new Button();
@@ -65,6 +66,7 @@
             ColumnInfo_HDB = new DataGridViewTextBoxColumn();
             openFileDialogTask_HDB = new OpenFileDialog();
             saveFileDialogTask_HDB = new SaveFileDialog();
+            toolTipMM_HDB = new ToolTip(components);
             panelMenu_HDB.SuspendLayout();
             groupBoxStringsAdd_HDB.SuspendLayout();
             panelGrid_HDB.SuspendLayout();
@@ -97,11 +99,13 @@
             // 
             // buttonGraph_HDB
             // 
+            buttonGraph_HDB.Cursor = Cursors.Hand;
             buttonGraph_HDB.Image = Properties.Resources.статистика;
             buttonGraph_HDB.Location = new Point(379, 3);
             buttonGraph_HDB.Name = "buttonGraph_HDB";
             buttonGraph_HDB.Size = new Size(293, 109);
             buttonGraph_HDB.TabIndex = 7;
+            toolTipMM_HDB.SetToolTip(buttonGraph_HDB, "Открыть граф");
             buttonGraph_HDB.UseVisualStyleBackColor = true;
             buttonGraph_HDB.Click += buttonGraph_HDB_Click;
             // 
@@ -109,6 +113,7 @@
             // 
             textBoxMaxCost_HDB.Location = new Point(200, 327);
             textBoxMaxCost_HDB.Name = "textBoxMaxCost_HDB";
+            textBoxMaxCost_HDB.ReadOnly = true;
             textBoxMaxCost_HDB.Size = new Size(125, 27);
             textBoxMaxCost_HDB.TabIndex = 6;
             // 
@@ -116,6 +121,7 @@
             // 
             textBoxMinCost_HDB.Location = new Point(200, 258);
             textBoxMinCost_HDB.Name = "textBoxMinCost_HDB";
+            textBoxMinCost_HDB.ReadOnly = true;
             textBoxMinCost_HDB.Size = new Size(125, 27);
             textBoxMinCost_HDB.TabIndex = 6;
             // 
@@ -123,6 +129,7 @@
             // 
             textBoxAvCost_HDB.Location = new Point(200, 194);
             textBoxAvCost_HDB.Name = "textBoxAvCost_HDB";
+            textBoxAvCost_HDB.ReadOnly = true;
             textBoxAvCost_HDB.Size = new Size(125, 27);
             textBoxAvCost_HDB.TabIndex = 6;
             // 
@@ -130,46 +137,55 @@
             // 
             textBoxSum_HDB.Location = new Point(200, 131);
             textBoxSum_HDB.Name = "textBoxSum_HDB";
+            textBoxSum_HDB.ReadOnly = true;
             textBoxSum_HDB.Size = new Size(125, 27);
             textBoxSum_HDB.TabIndex = 6;
             // 
             // buttonMaxCost_HDB
             // 
+            buttonMaxCost_HDB.Cursor = Cursors.Hand;
             buttonMaxCost_HDB.Location = new Point(15, 318);
             buttonMaxCost_HDB.Name = "buttonMaxCost_HDB";
             buttonMaxCost_HDB.Size = new Size(166, 45);
             buttonMaxCost_HDB.TabIndex = 5;
             buttonMaxCost_HDB.Text = "Максимальная цена";
+            toolTipMM_HDB.SetToolTip(buttonMaxCost_HDB, "Найти максимальную цену");
             buttonMaxCost_HDB.UseVisualStyleBackColor = true;
             buttonMaxCost_HDB.Click += buttonMaxCost_HDB_Click;
             // 
             // buttonMinCost_HDB
             // 
+            buttonMinCost_HDB.Cursor = Cursors.Hand;
             buttonMinCost_HDB.Location = new Point(15, 249);
             buttonMinCost_HDB.Name = "buttonMinCost_HDB";
             buttonMinCost_HDB.Size = new Size(166, 45);
             buttonMinCost_HDB.TabIndex = 5;
             buttonMinCost_HDB.Text = "Минимальная цена";
+            toolTipMM_HDB.SetToolTip(buttonMinCost_HDB, "Найти минимальную цену");
             buttonMinCost_HDB.UseVisualStyleBackColor = true;
             buttonMinCost_HDB.Click += buttonMinCost_HDB_Click;
             // 
             // buttonAvCost_HDB
             // 
+            buttonAvCost_HDB.Cursor = Cursors.Hand;
             buttonAvCost_HDB.Location = new Point(15, 185);
             buttonAvCost_HDB.Name = "buttonAvCost_HDB";
             buttonAvCost_HDB.Size = new Size(166, 45);
             buttonAvCost_HDB.TabIndex = 5;
             buttonAvCost_HDB.Text = "Средняя цена";
+            toolTipMM_HDB.SetToolTip(buttonAvCost_HDB, "Подсчитать среднюю арифметическую цену");
             buttonAvCost_HDB.UseVisualStyleBackColor = true;
             buttonAvCost_HDB.Click += buttonAvCost_HDB_Click;
             // 
             // buttonSum_HDB
             // 
+            buttonSum_HDB.Cursor = Cursors.Hand;
             buttonSum_HDB.Location = new Point(15, 118);
             buttonSum_HDB.Name = "buttonSum_HDB";
             buttonSum_HDB.Size = new Size(166, 52);
             buttonSum_HDB.TabIndex = 5;
             buttonSum_HDB.Text = "Общее количество продуктов на складе";
+            toolTipMM_HDB.SetToolTip(buttonSum_HDB, "Подсчитать общее кол-во кг\\ед. на складе");
             buttonSum_HDB.UseVisualStyleBackColor = true;
             buttonSum_HDB.Click += buttonSum_HDB_Click;
             // 
@@ -282,51 +298,63 @@
             // buttonAddProduct_HDB
             // 
             buttonAddProduct_HDB.BackColor = SystemColors.HighlightText;
+            buttonAddProduct_HDB.Cursor = Cursors.Hand;
             buttonAddProduct_HDB.Image = (Image)resources.GetObject("buttonAddProduct_HDB.Image");
             buttonAddProduct_HDB.Location = new Point(293, 404);
             buttonAddProduct_HDB.Name = "buttonAddProduct_HDB";
             buttonAddProduct_HDB.Size = new Size(80, 80);
             buttonAddProduct_HDB.TabIndex = 3;
+            toolTipMM_HDB.SetToolTip(buttonAddProduct_HDB, "Добавить новую поставку");
             buttonAddProduct_HDB.UseVisualStyleBackColor = false;
             buttonAddProduct_HDB.Click += buttonAddProduct_HDB_Click;
             // 
             // buttonSaveFile_HDB
             // 
+            buttonSaveFile_HDB.Cursor = Cursors.Hand;
             buttonSaveFile_HDB.Image = Properties.Resources.page_save;
             buttonSaveFile_HDB.Location = new Point(101, 12);
             buttonSaveFile_HDB.Name = "buttonSaveFile_HDB";
             buttonSaveFile_HDB.Size = new Size(80, 80);
             buttonSaveFile_HDB.TabIndex = 2;
+            toolTipMM_HDB.SetToolTip(buttonSaveFile_HDB, "Сохранить файл");
             buttonSaveFile_HDB.UseVisualStyleBackColor = true;
             buttonSaveFile_HDB.Click += buttonSaveFile_HDB_Click;
             // 
             // buttonAddFile_HDB
             // 
+            buttonAddFile_HDB.Cursor = Cursors.Hand;
             buttonAddFile_HDB.Image = Properties.Resources.page_add;
             buttonAddFile_HDB.Location = new Point(15, 12);
             buttonAddFile_HDB.Name = "buttonAddFile_HDB";
             buttonAddFile_HDB.Size = new Size(80, 80);
             buttonAddFile_HDB.TabIndex = 2;
+            toolTipMM_HDB.SetToolTip(buttonAddFile_HDB, "Загрузить файл");
             buttonAddFile_HDB.UseVisualStyleBackColor = true;
             buttonAddFile_HDB.Click += buttonAddFile_HDB_Click;
             // 
             // buttonHelp_HDB
             // 
+            buttonHelp_HDB.Cursor = Cursors.Hand;
             buttonHelp_HDB.Image = Properties.Resources.help;
             buttonHelp_HDB.Location = new Point(15, 404);
             buttonHelp_HDB.Name = "buttonHelp_HDB";
             buttonHelp_HDB.Size = new Size(80, 80);
             buttonHelp_HDB.TabIndex = 1;
+            toolTipMM_HDB.SetToolTip(buttonHelp_HDB, "Посмотреть область применений и Справку");
             buttonHelp_HDB.UseVisualStyleBackColor = true;
+            buttonHelp_HDB.Click += buttonHelp_HDB_Click;
             // 
             // buttonAbout_HDB
             // 
+            buttonAbout_HDB.Cursor = Cursors.Hand;
             buttonAbout_HDB.Image = Properties.Resources.information;
             buttonAbout_HDB.Location = new Point(101, 404);
             buttonAbout_HDB.Name = "buttonAbout_HDB";
             buttonAbout_HDB.Size = new Size(80, 80);
             buttonAbout_HDB.TabIndex = 1;
+            toolTipMM_HDB.SetToolTip(buttonAbout_HDB, "Информация о разработчике");
             buttonAbout_HDB.UseVisualStyleBackColor = true;
+            buttonAbout_HDB.Click += buttonAbout_HDB_Click;
             // 
             // panelGrid_HDB
             // 
@@ -341,6 +369,7 @@
             // dataGridView_HDB
             // 
             dataGridView_HDB.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView_HDB.BorderStyle = BorderStyle.None;
             dataGridView_HDB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_HDB.Columns.AddRange(new DataGridViewColumn[] { ColumnCount__HDB, ColumnCodePro_HDB, ColumnNameOfPro_HDB, ColumnCount_HDB, ColumnPrice_HDB, ColumnInfo_HDB });
             dataGridView_HDB.Location = new Point(3, 12);
@@ -403,6 +432,10 @@
             ClientSize = new Size(1368, 496);
             Controls.Add(panelMenu_HDB);
             Controls.Add(panelGrid_HDB);
+            MaximizeBox = false;
+            MaximumSize = new Size(1386, 543);
+            MinimizeBox = false;
+            MinimumSize = new Size(1386, 543);
             Name = "FormMain";
             Text = "Menu";
             panelMenu_HDB.ResumeLayout(false);
@@ -452,5 +485,6 @@
         private TextBox textBoxMaxCost_HDB;
         private TextBox textBoxMinCost_HDB;
         private Button buttonGraph_HDB;
+        private ToolTip toolTipMM_HDB;
     }
 }

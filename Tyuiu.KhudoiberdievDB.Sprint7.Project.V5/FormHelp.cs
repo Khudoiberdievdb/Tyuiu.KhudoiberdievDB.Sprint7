@@ -16,5 +16,16 @@ namespace Tyuiu.KhudoiberdievDB.Sprint7.Project.V5
         {
             InitializeComponent();
         }
+
+        private void textBoxHelp_HDB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBackT0MM_HDB_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }
